@@ -2,7 +2,7 @@
 
 > _Example `<coffee-shop-ambience>` component:_
 >
-> <img src="./demo/readme/coffee-shop-ambience.gif" alt="Coffee shop ambience small demo" width="297px" height="260px" />
+> <img src="./docs/readme/coffee-shop-ambience.gif" alt="Coffee shop ambience small demo" width="297px" height="260px" />
 
 <br />
 
