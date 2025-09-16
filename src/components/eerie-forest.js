@@ -1,7 +1,7 @@
 import { PlayBox } from '../play-box.js';
 
-const AUDIO_SRC = '/assets/eerie-forest/eerie-forest.mp3';
-const IMAGE_SRC = '/assets/eerie-forest/eerie-forest.jpg';
+const AUDIO_SRC = './src/assets/eerie-forest/eerie-forest.mp3';
+const IMAGE_SRC = './src/assets/eerie-forest/eerie-forest.jpg';
 
 class EerieForestAmbience extends PlayBox {
   constructor() {

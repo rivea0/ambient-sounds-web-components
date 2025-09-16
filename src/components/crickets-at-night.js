@@ -1,7 +1,7 @@
 import { PlayBox } from '../play-box.js';
 
-const AUDIO_SRC = '/assets/crickets-at-night/crickets-at-night.mp3';
-const IMAGE_SRC = '/assets/crickets-at-night/crickets-at-night.jpg';
+const AUDIO_SRC = './src/assets/crickets-at-night/crickets-at-night.mp3';
+const IMAGE_SRC = './src/assets/crickets-at-night/crickets-at-night.jpg';
 
 class CricketsAtNightAmbience extends PlayBox {
   constructor() {

@@ -1,7 +1,7 @@
 import { PlayBox } from '../play-box.js';
 
-const AUDIO_SRC = '/assets/walking-on-forest-road/walking-on-forest-road.mp3';
-const IMAGE_SRC = '/assets/walking-on-forest-road/walking-on-forest-road.jpg';
+const AUDIO_SRC = './src/assets/walking-on-forest-road/walking-on-forest-road.mp3';
+const IMAGE_SRC = './src/assets/walking-on-forest-road/walking-on-forest-road.jpg';
 
 class WalkingOnForestRoadAmbience extends PlayBox {
   constructor() {

@@ -1,7 +1,7 @@
 import { PlayBox } from '../play-box.js';
 
-const AUDIO_SRC = '/assets/fire/fire.mp3';
-const IMAGE_SRC = '/assets/fire/fire.jpg';
+const AUDIO_SRC = './src/assets/fire/fire.mp3';
+const IMAGE_SRC = './src/assets/fire/fire.jpg';
 
 class FireAmbience extends PlayBox {
   constructor() {

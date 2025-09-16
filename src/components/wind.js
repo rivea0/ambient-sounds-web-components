@@ -1,7 +1,7 @@
 import { PlayBox } from '../play-box.js';
 
-const AUDIO_SRC = '/assets/wind/wind.mp3';
-const IMAGE_SRC = '/assets/wind/wind.jpg';
+const AUDIO_SRC = './src/assets/wind/wind.mp3';
+const IMAGE_SRC = './src/assets/wind/wind.jpg';
 
 class WindAmbience extends PlayBox {
   constructor() {

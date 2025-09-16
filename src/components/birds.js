@@ -1,7 +1,7 @@
 import { PlayBox } from '../play-box.js';
 
-const AUDIO_SRC = '/assets/birds/birds.mp3';
-const IMAGE_SRC = '/assets/birds/birds.jpg';
+const AUDIO_SRC = './src/assets/birds/birds.mp3';
+const IMAGE_SRC = './src/assets/birds/birds.jpg';
 
 class BirdsAmbience extends PlayBox {
   constructor() {

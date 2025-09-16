@@ -1,7 +1,7 @@
 import { PlayBox } from '../play-box.js';
 
-const AUDIO_SRC = '/assets/rain-on-window/rain-on-window.mp3';
-const IMAGE_SRC = '/assets/rain-on-window/rain-on-window.jpg';
+const AUDIO_SRC = './src/assets/rain-on-window/rain-on-window.mp3';
+const IMAGE_SRC = './src/assets/rain-on-window/rain-on-window.jpg';
 
 class RainOnWindowAmbience extends PlayBox {
   constructor() {

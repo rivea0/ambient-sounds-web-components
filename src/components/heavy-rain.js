@@ -1,7 +1,7 @@
 import { PlayBox } from '../play-box.js';
 
-const AUDIO_SRC = '/assets/heavy-rain/heavy-rain.mp3';
-const IMAGE_SRC = '/assets/heavy-rain/heavy-rain.jpg';
+const AUDIO_SRC = './src/assets/heavy-rain/heavy-rain.mp3';
+const IMAGE_SRC = './src/assets/heavy-rain/heavy-rain.jpg';
 
 class HeavyRainAmbience extends PlayBox {
   constructor() {

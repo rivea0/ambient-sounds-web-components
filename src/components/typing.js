@@ -1,7 +1,7 @@
 import { PlayBox } from '../play-box.js';
 
-const AUDIO_SRC = '/assets/typing/typing.mp3';
-const IMAGE_SRC = '/assets/typing/typing.jpg';
+const AUDIO_SRC = './src/assets/typing/typing.mp3';
+const IMAGE_SRC = './src/assets/typing/typing.jpg';
 
 class TypingAmbience extends PlayBox {
   constructor() {

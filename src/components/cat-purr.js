@@ -1,7 +1,7 @@
 import { PlayBox } from '../play-box.js';
 
-const AUDIO_SRC = '/assets/cat-purr/cat-purr.mp3';
-const IMAGE_SRC = '/assets/cat-purr/cat-purr.jpg';
+const AUDIO_SRC = './src/assets/cat-purr/cat-purr.mp3';
+const IMAGE_SRC = './src/assets/cat-purr/cat-purr.jpg';
 
 class CatPurr extends PlayBox {
   constructor() {

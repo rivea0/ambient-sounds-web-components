@@ -1,7 +1,7 @@
 import { PlayBox } from '../play-box.js';
 
-const AUDIO_SRC = '/assets/coffee-shop/coffee-shop.mp3';
-const IMAGE_SRC = '/assets/coffee-shop/coffee-shop.jpg';
+const AUDIO_SRC = './src/assets/coffee-shop/coffee-shop.mp3';
+const IMAGE_SRC = './src/assets/coffee-shop/coffee-shop.jpg';
 
 class CoffeeShopAmbience extends PlayBox {
   constructor() {

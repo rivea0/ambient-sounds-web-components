@@ -1,7 +1,7 @@
 import { PlayBox } from '../play-box.js';
 
-const AUDIO_SRC = '/assets/waves/waves.mp3';
-const IMAGE_SRC = '/assets/waves/waves.jpg';
+const AUDIO_SRC = './src/assets/waves/waves.mp3';
+const IMAGE_SRC = './src/assets/waves/waves.jpg';
 
 class WavesAmbience extends PlayBox {
   constructor() {

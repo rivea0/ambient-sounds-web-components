@@ -1,7 +1,7 @@
 import { PlayBox } from '../play-box.js';
 
-const AUDIO_SRC = '/assets/books/books.mp3';
-const IMAGE_SRC = '/assets/books/books.jpg';
+const AUDIO_SRC = './src/assets/books/books.mp3';
+const IMAGE_SRC = './src/assets/books/books.jpg';
 
 class BooksAmbience extends PlayBox {
   constructor() {
