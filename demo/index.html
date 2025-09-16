@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.bunny.net" />
+    <link
+      href="https://fonts.bunny.net/css?family=dm-mono:400|lora:500,600,700"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./prism-one-light.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./prism-min.js" defer></script>
+    <script type="module" src="../src/components/fire.js" defer></script>
+    <script
+      type="module"
+      src="../src/components/thunderstorm.js"
+      defer
+    ></script>
+    <script type="module" src="../src/components/heavy-rain.js" defer></script>
+    <script
+      type="module"
+      src="../src/components/rain-on-window.js"
+      defer
+    ></script>
+    <script type="module" src="../src/components/waves.js" defer></script>
+    <script type="module" src="../src/components/wind.js" defer></script>
+    <script type="module" src="../src/components/coffee-shop.js" defer></script>
+    <script type="module" src="../src/components/birds.js" defer></script>
+    <script type="module" src="../src/components/cat-purr.js" defer></script>
+    <script type="module" src="../src/components/books.js" defer></script>
+    <script
+      type="module"
+      src="../src/components/walking-on-forest-road.js"
+      defer
+    ></script>
+    <script type="module" src="../src/components/typing.js" defer></script>
+    <script
+      type="module"
+      src="../src/components/crickets-at-night.js"
+      defer
+    ></script>
+    <script
+      type="module"
+      src="../src/components/eerie-forest.js"
+      defer
+    ></script>
+    <script type="module" src="./handle-form.js" defer></script>
+    <title>Ambient Sounds Web Components</title>
+  </head>
+  <body>
+    <header>
+      <h1 id="main-heading">Ambient Sounds</h1>
+      <h2 id="secondary-heading">Web Components</h2>
+      <a
+        href="https://github.com/rivea0/ambient-sounds-web-components"
+        class="github-corner"
+        aria-label="View source on GitHub"
+        ><svg
+          width="80"
+          height="80"
+          viewBox="0 0 250 250"
+          style="
+            fill: #151513;
+            color: #fff;
+            position: absolute;
+            top: 0;
+            border: 0;
+            right: 0;
+          "
+          aria-hidden="true"
+        >
+          <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+          <path
+            d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+            fill="currentColor"
+            style="transform-origin: 130px 106px"
+            class="octo-arm"
+          ></path>
+          <path
+            d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+            fill="currentColor"
+            class="octo-body"
+          ></path></svg
+      ></a>
+    </header>
+    <main>
+      <div id="component-items">
+        <div class="item">
+          <h2>Fire</h2>
+          <fire-ambience></fire-ambience>
+          <div class="code-block">
+            <pre><code>&lt;fire-ambience&gt;<br>&lt;/fire-ambience&gt;</code></pre>
+          </div>
+        </div>
+        <div class="item">
+          <h2>Thunderstorm</h2>
+          <thunderstorm-ambience></thunderstorm-ambience>
+          <div class="code-block">
+            <pre><code>&lt;thunderstorm-ambience&gt;<br>&lt;/thunderstorm-ambience&gt;</code></pre>
+          </div>
+        </div>
+        <div class="item">
+          <h2>Heavy rain</h2>
+          <heavy-rain-ambience></heavy-rain-ambience>
+          <div class="code-block">
+            <pre><code>&lt;heavy-rain-ambience&gt;<br>&lt;/heavy-rain-ambience&gt;</code></pre>
+          </div>
+        </div>
+        <div class="item">
+          <h2>Rain on window</h2>
+          <rain-on-window></rain-on-window>
+          <div class="code-block">
+            <pre><code>&lt;rain-on-window&gt;<br>&lt;/rain-on-window&gt;</code></pre>
+          </div>
+        </div>
+        <div class="item">
+          <h2>Waves</h2>
+          <waves-ambience></waves-ambience>
+          <div class="code-block">
+            <pre><code>&lt;waves-ambience&gt;<br>&lt;/waves-ambience&gt;</code></pre>
+          </div>
+        </div>
+        <div class="item">
+          <h2>Wind</h2>
+          <wind-ambience></wind-ambience>
+          <div class="code-block">
+            <pre><code>&lt;wind-ambience&gt;<br>&lt;/wind-ambience&gt;</code></pre>
+          </div>
+        </div>
+        <div class="item">
+          <h2>Coffee shop</h2>
+          <coffee-shop-ambience></coffee-shop-ambience>
+          <div class="code-block">
+            <pre><code>&lt;coffee-shop-ambience&gt;<br>&lt;/coffee-shop-ambience&gt;</code></pre>
+          </div>
+        </div>
+        <div class="item">
+          <h2>Birds</h2>
+          <birds-ambience></birds-ambience>
+          <div class="code-block">
+            <pre><code>&lt;birds-ambience&gt;<br>&lt;/birds-ambience&gt;</code></pre>
+          </div>
+        </div>
+        <div class="item">
+          <h2>Cat purr</h2>
+          <cat-purr></cat-purr>
+          <div class="code-block">
+            <pre><code>&lt;cat-purr&gt;<br>&lt;/cat-purr&gt;</code></pre>
+          </div>
+        </div>
+        <div class="item">
+          <h2>Books</h2>
+          <books-ambience></books-ambience>
+          <div class="code-block">
+            <pre><code>&lt;books-ambience&gt;<br>&lt;/books-ambience&gt;</code></pre>
+          </div>
+        </div>
+        <div class="item">
+          <h2>Walking on forest road</h2>
+          <walking-on-forest-road></walking-on-forest-road>
+          <div class="code-block">
+            <pre><code>&lt;walking-on-forest-road&gt;<br>&lt;/walking-on-forest-road&gt;</code></pre>
+          </div>
+        </div>
+        <div class="item">
+          <h2>Typing</h2>
+          <typing-ambience></typing-ambience>
+          <div class="code-block">
+            <pre><code>&lt;typing-ambience&gt;<br>&lt;/typing-ambience&gt;</code></pre>
+          </div>
+        </div>
+        <div class="item">
+          <h2>Crickets at night</h2>
+          <crickets-at-night></crickets-at-night>
+          <div class="code-block">
+            <pre><code>&lt;crickets-at-night&gt;<br>&lt;/crickets-at-night&gt;</code></pre>
+          </div>
+        </div>
+        <div class="item">
+          <h2>Eerie forest</h2>
+          <eerie-forest-ambience></eerie-forest-ambience>
+          <div class="code-block">
+            <pre><code>&lt;eerie-forest-ambience&gt;<br>&lt;/eerie-forest-ambience&gt;</code></pre>
+          </div>
+        </div>
+      </div>
+      <div id="details-items">
+        <details>
+          <summary>Customize</summary>
+          <div class="customize-form-element">
+            <label for="overlay-color">overlayColor: </label>
+            <input
+              type="color"
+              id="overlay-color"
+              data-event="change"
+              data-prop="overlayColor"
+            />
+          </div>
+          <div class="customize-form-element">
+            <label for="icon-color">iconColor: </label>
+            <input
+              type="color"
+              id="icon-color"
+              data-event="change"
+              data-prop="iconColor"
+            />
+          </div>
+          <div class="customize-form-element">
+            <label for="button-position">buttonPosition: </label>
+            <select
+              name="button-position"
+              id="button-position"
+              data-event="input"
+              data-prop="buttonPosition"
+            >
+              <option value="top">top</option>
+              <option value="top-left">top-left</option>
+              <option value="top-right">top-right</option>
+              <option value="center">center</option>
+              <option value="bottom">bottom</option>
+              <option value="bottom-left">bottom-left</option>
+              <option value="bottom-right">bottom-right</option>
+            </select>
+          </div>
+          <div class="customize-form-element">
+            <label for="box-border-radius">boxBorderRadius: </label>
+            <select
+              name="box-border-radius"
+              id="box-border-radius"
+              data-event="input"
+              data-prop="boxBorderRadius"
+            >
+              <option value="none">none</option>
+              <option value="full">full</option>
+              <option value="x-small">x-small</option>
+              <option value="small">small</option>
+              <option value="medium">medium</option>
+              <option value="large">large</option>
+              <option value="x-large">x-large</option>
+            </select>
+          </div>
+          <div class="customize-form-element">
+            <label for="button-border-radius">buttonBorderRadius: </label>
+            <select
+              aria-label="Button border radius:"
+              name="button-border-radius"
+              id="button-border-radius"
+              data-event="input"
+              data-prop="buttonBorderRadius"
+            >
+              <option value="none">none</option>
+              <option value="full">full</option>
+              <option value="x-small">x-small</option>
+              <option value="small">small</option>
+              <option value="medium">medium</option>
+              <option value="large">large</option>
+              <option value="x-large">x-large</option>
+            </select>
+          </div>
+          <button type="button" id="reset-customization-btn">
+            Reset to defaults
+          </button>
+        </details>
+        <details>
+          <summary>Make your own</summary>
+          <div>
+            <p>
+              You can easily create your own custom component by extending the
+              <code>PlayBox</code> class:
+            </p>
+            <pre><code class="language-javascript">const AUDIO_SRC = '/path/to/audio/file';
+const IMAGE_SRC = '/path/to/image/file';
+
+class MyCustomElement extends PlayBox {
+  constructor() {
+    super();
+  }
+
+  connectedCallback() {
+    super.connectedCallback();
+
+    this._audioEl.src = AUDIO_SRC;
+    this._boxDiv.style.backgroundImage = `url("${IMAGE_SRC}")`;
+  }
+}
+
+if (!customElements.get('my-custom-element')) {
+  customElements.define('my-custom-element', MyCustomElement);
+}
+</code></pre>
+            <p>
+              See more on
+              <a href="https://github.com/rivea0/ambient-sounds-web-components"
+                >GitHub</a
+              >.
+            </p>
+          </div>
+        </details>
+        <details>
+          <summary>Credits</summary>
+          <div>
+            <ul class="credits-list">
+              <li>
+                Fire
+                <ul>
+                  <li>
+                    Sound:
+                    <a
+                      href="https://freesound.org/people/inchadney/sounds/132534/"
+                      >Fireplace</a
+                    >
+                    by
+                    <a href="https://freesound.org/people/inchadney/"
+                      >inchadney</a
+                    >
+                    | License:
+                    <a href="http://creativecommons.org/publicdomain/zero/1.0/"
+                      >Creative Commons 0</a
+                    >
+                  </li>
+                  <li>
+                    Image:
+                    <a
+                      href="https://unsplash.com/photos/bonfire-during-nighttime-XHrq43cIss0"
+                      >Photo</a
+                    >
+                    by
+                    <a href="https://unsplash.com/@rizovo">Riley sporle</a> on
+                    <a href="https://unsplash.com">Unsplash</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                Thunderstorm
+                <ul>
+                  <li>
+                    Sound:
+                    <a
+                      href="https://freesound.org/people/BlueDelta/sounds/446753/"
+                      >Heavy Thunder Strike</a
+                    >
+                    by
+                    <a href="https://freesound.org/people/BlueDelta/"
+                      >BlueDelta</a
+                    >
+                    | License:
+                    <a href="http://creativecommons.org/publicdomain/zero/1.0/"
+                      >Creative Commons 0</a
+                    >
+                  </li>
+                  <li>
+                    Image:
+                    <a
+                      href="https://unsplash.com/photos/lightning-strike-on-the-sky-m4QBTHMYg-Q"
+                      >Photo</a
+                    >
+                    by
+                    <a href="https://unsplash.com/@milen_kolev">Milen Kolev</a>
+                    on <a href="https://unsplash.com">Unsplash</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                Heavy rain
+                <ul>
+                  <li>
+                    Sound:
+                    <a
+                      href="https://freesound.org/people/lebaston100/sounds/243629/"
+                      >Heavy Rain</a
+                    >
+                    by
+                    <a href="https://freesound.org/people/lebaston100/"
+                      >lebaston100</a
+                    >
+                    | License:
+                    <a href="https://creativecommons.org/licenses/by/4.0/"
+                      >Attribution 4.0</a
+                    >
+                  </li>
+                  <li>
+                    Image:
+                    <a
+                      href="https://www.pexels.com/photo/water-droplets-in-tilt-shift-lens-8345318"
+                      >Photo</a
+                    >
+                    by
+                    <a href="https://www.pexels.com/@animesh-srivastava-3019173"
+                      >Animesh Srivastava</a
+                    >
+                    from <a href="https://www.pexels.com">Pexels</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                Rain on window
+                <ul>
+                  <li>
+                    Sound:
+                    <a
+                      href="https://freesound.org/people/InspectorJ/sounds/346642/"
+                      >Rain on Windows, Interior, A</a
+                    >
+                    by
+                    <a href="https://freesound.org/people/InspectorJ/"
+                      >InspectorJ</a
+                    >
+                    | License:
+                    <a href="https://creativecommons.org/licenses/by/4.0/"
+                      >Attribution 4.0</a
+                    >
+                  </li>
+                  <li>
+                    Image:
+                    <a
+                      href="https://unsplash.com/photos/raindrops-on-clear-window-Bu1zj2WbjHE"
+                      >Photo</a
+                    >
+                    by <a href="https://unsplash.com/@anant90">Anant Jain</a> on
+                    <a href="https://unsplash.com">Unsplash</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                Waves
+                <ul>
+                  <li>
+                    Sound:
+                    <a href="https://freesound.org/people/Soarer/sounds/13793/"
+                      >North Sea</a
+                    >
+                    by
+                    <a href="https://freesound.org/people/Soarer/">Soarer</a> |
+                    License:
+                    <a href="https://creativecommons.org/licenses/by/4.0/"
+                      >Attribution 4.0</a
+                    >
+                  </li>
+                  <li>
+                    Image:
+                    <a
+                      href="https://unsplash.com/photos/a-large-body-of-water-with-waves-in-it-axUVJB5tH-I"
+                      >Photo</a
+                    >
+                    by
+                    <a href="https://unsplash.com/@malakiwhite17"
+                      >White Malaki</a
+                    >
+                    on <a href="https://unsplash.com">Unsplash</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                Wind
+                <ul>
+                  <li>
+                    Sound:
+                    <a
+                      href="https://freesound.org/people/guillermochicasonido/sounds/660464/"
+                      >Strong wind</a
+                    >
+                    by
+                    <a href="https://freesound.org/people/guillermochicasonido/"
+                      >guillermochicasonido</a
+                    >
+                    | License:
+                    <a href="https://creativecommons.org/licenses/by/4.0/"
+                      >Attribution 4.0</a
+                    >
+                  </li>
+                  <li>
+                    Image:
+                    <a
+                      href="https://www.pexels.com/photo/misty-landscape-with-lone-tree-in-fog-28625820"
+                      >Photo</a
+                    >
+                    by
+                    <a href="https://www.pexels.com/@alexandre-moreira-2527876"
+                      >Alexandre Moreira
+                    </a>
+                    from <a href="https://www.pexels.com">Pexels</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                Coffee shop
+                <ul>
+                  <li>
+                    Sound:
+                    <a href="https://freesound.org/people/waweee/sounds/370973/"
+                      >coffee shop ambience</a
+                    >
+                    by
+                    <a href="https://freesound.org/people/waweee/">waweee</a> |
+                    License:
+                    <a href="http://creativecommons.org/publicdomain/zero/1.0/"
+                      >Creative Commons 0</a
+                    >
+                  </li>
+                  <li>
+                    Image:
+                    <a
+                      href="https://unsplash.com/photos/shot-glass-on-table-Y-RyEJ8eqHc"
+                      >Photo</a
+                    >
+                    by
+                    <a href="https://unsplash.com/@andrewwelch3"
+                      >andrew welch</a
+                    >
+                    on <a href="https://unsplash.com">Unsplash</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                Birds
+                <ul>
+                  <li>
+                    Sound:
+                    <a
+                      href="https://freesound.org/people/inchadney/sounds/56611/"
+                      >Morning in the country</a
+                    >
+                    by
+                    <a href="https://freesound.org/people/inchadney/"
+                      >inchadney</a
+                    >
+                    | License:
+                    <a href="https://creativecommons.org/licenses/by/4.0/"
+                      >Attribution 4.0</a
+                    >
+                  </li>
+                  <li>
+                    Image:
+                    <a
+                      href="https://unsplash.com/photos/yellow-and-black-bird-on-brown-tree-branch-SVP1CS5b9e4"
+                      >Photo</a
+                    >
+                    by
+                    <a href="https://unsplash.com/@valentinhintikka"
+                      >valentin hintikka</a
+                    >
+                    on <a href="https://unsplash.com">Unsplash</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                Cat purr
+                <ul>
+                  <li>
+                    Sound:
+                    <a
+                      href="https://freesound.org/people/Minscer/sounds/424355/"
+                      >purring happy cat</a
+                    >
+                    by
+                    <a href="https://freesound.org/people/Minscer/">Minscer</a>
+                    | License:
+                    <a href="http://creativecommons.org/publicdomain/zero/1.0/"
+                      >Creative Commons 0</a
+                    >
+                  </li>
+                  <li>
+                    Image:
+                    <a
+                      href="https://www.pexels.com/photo/relaxed-ginger-cat-sleeping-on-wooden-surface-30389394"
+                      >Photo</a
+                    >
+                    by
+                    <a href="https://www.pexels.com/@can-ceylan-2148269005"
+                      >Can Ceylan
+                    </a>
+                    from <a href="https://www.pexels.com">Pexels</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                Books
+                <ul>
+                  <li>
+                    Sound:
+                    <a
+                      href="https://freesound.org/people/Australopithecusman/sounds/388947/"
+                      >Very Old Book Page Turns;cracking</a
+                    >
+                    by
+                    <a href="https://freesound.org/people/Australopithecusman/"
+                      >Australopithecusman</a
+                    >
+                    | License:
+                    <a href="https://creativecommons.org/licenses/by/4.0/"
+                      >Attribution 4.0</a
+                    >
+                  </li>
+                  <li>
+                    Image:
+                    <a
+                      href="https://unsplash.com/photos/books-on-brown-wooden-shelf-2NT3cqLN21k"
+                      >Photo</a
+                    >
+                    by
+                    <a href="https://unsplash.com/@mihai14">Mihai Lazăr</a> on
+                    <a href="https://unsplash.com">Unsplash</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                Walking on forest road gravel & grass
+                <ul>
+                  <li>
+                    Sound:
+                    <a
+                      href="https://freesound.org/people/straget/sounds/411206/"
+                      >Going on a forest road gravel and grass.wav</a
+                    >
+                    by
+                    <a href="https://freesound.org/people/straget/">straget</a>
+                    | License:
+                    <a href="http://creativecommons.org/publicdomain/zero/1.0/"
+                      >Creative Commons 0</a
+                    >
+                  </li>
+                  <li>
+                    Image:
+                    <a
+                      href="https://unsplash.com/photos/a-dirt-road-in-the-middle-of-a-lush-green-forest-ymgNndSAEnI"
+                      >Photo</a
+                    >
+                    by
+                    <a href="https://unsplash.com/@nereiq">Nereid Ndreu</a> on
+                    <a href="https://unsplash.com">Unsplash</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                Typing
+                <ul>
+                  <li>
+                    Sound:
+                    <a
+                      href="https://freesound.org/people/GeorgeHopkins/sounds/537244/"
+                      >Mechanical Keyboard Typing</a
+                    >
+                    by
+                    <a href="https://freesound.org/people/GeorgeHopkins/"
+                      >GeorgeHopkins</a
+                    >
+                    | License:
+                    <a href="https://creativecommons.org/licenses/by/4.0/"
+                      >Attribution 4.0</a
+                    >
+                  </li>
+                  <li>
+                    Image:
+                    <a
+                      href="https://unsplash.com/photos/white-ceramic-mug-8fMHWkbZC54"
+                      >Photo</a
+                    >
+                    by <a href="https://unsplash.com/@andymant">Andrew M</a> on
+                    <a href="https://unsplash.com">Unsplash</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                Crickets at night
+                <ul>
+                  <li>
+                    Sound:
+                    <a
+                      href="https://freesound.org/people/sengjinn/sounds/175020/"
+                      >Ambience Night Field Cricket 01</a
+                    >
+                    by
+                    <a href="https://freesound.org/people/sengjinn/"
+                      >sengjinn</a
+                    >
+                    | License:
+                    <a href="http://creativecommons.org/publicdomain/zero/1.0/"
+                      >Creative Commons 0</a
+                    >
+                  </li>
+                  <li>
+                    Image:
+                    <a
+                      href="https://unsplash.com/photos/a-bird-is-standing-in-the-grass-near-a-body-of-water-wk2gQASoPxM"
+                      >Photo</a
+                    >
+                    by
+                    <a href="https://unsplash.com/@leonid_filinov"
+                      >Leonid Filinov</a
+                    >
+                    on <a href="https://unsplash.com">Unsplash</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                Eerie forest
+                <ul>
+                  <li>
+                    Sound:
+                    <a
+                      href="https://freesound.org/people/gregswinford/sounds/70100/"
+                      >eerie_forest</a
+                    >
+                    by
+                    <a href="https://freesound.org/people/gregswinford/"
+                      >gregswinford</a
+                    >
+                    | License:
+                    <a href="https://creativecommons.org/licenses/by/4.0/"
+                      >Attribution 4.0</a
+                    ><br />
+                    <a
+                      href="https://freesound.org/people/Benboncan/sounds/63842/"
+                      >Tawny Owls .wav</a
+                    >
+                    by
+                    <a href="https://freesound.org/people/Benboncan/"
+                      >Benboncan</a
+                    >
+                    | License:
+                    <a href="https://creativecommons.org/licenses/by/4.0/"
+                      >Attribution 4.0</a
+                    ><br />
+                    <a
+                      href="https://freesound.org/people/Benboncan/sounds/63220/"
+                      >Owls.wav</a
+                    >
+                    by
+                    <a href="https://freesound.org/people/Benboncan/"
+                      >Benboncan</a
+                    >
+                    | License:
+                    <a href="https://creativecommons.org/licenses/by/4.0/"
+                      >Attribution 4.0</a
+                    ><br />
+                    <a href="https://freesound.org/people/Q.K./sounds/56233/"
+                      >Crows_01.wav</a
+                    >
+                    by <a href="https://freesound.org/people/Q.K./">Q.K.</a> |
+                    License:
+                    <a href="http://creativecommons.org/publicdomain/zero/1.0/"
+                      >Creative Commons 0</a
+                    ><br />
+                    <a
+                      href="https://freesound.org/people/XxBirdoxX/sounds/52288/"
+                      >creeeeek-GAIN_01.wav</a
+                    >
+                    by
+                    <a href="https://freesound.org/people/XxBirdoxX/"
+                      >XxBirdoxX</a
+                    >
+                    | License:
+                    <a href="http://creativecommons.org/publicdomain/zero/1.0/"
+                      >Creative Commons 0</a
+                    ><br />
+                    <a
+                      href="https://freesound.org/people/dobroide/sounds/43661/"
+                      >20071104.forest.04.binaural.mp3</a
+                    >
+                    by
+                    <a href="https://freesound.org/people/dobroide/"
+                      >dobroide</a
+                    >
+                    | License:
+                    <a href="https://creativecommons.org/licenses/by/4.0/"
+                      >Attribution 4.0</a
+                    ><br />
+                    <a
+                      href="https://freesound.org/people/dobroide/sounds/20575/"
+                      >20060706.night.forest02.flac</a
+                    >
+                    by
+                    <a href="https://freesound.org/people/dobroide/"
+                      >dobroide</a
+                    >
+                    | License:
+                    <a href="https://creativecommons.org/licenses/by/4.0/"
+                      >Attribution 4.0</a
+                    ><br />
+                    <a
+                      href="https://freesound.org/people/dobroide/sounds/20573/"
+                      >20060706.night.cricket.flac</a
+                    >
+                    by
+                    <a href="https://freesound.org/people/dobroide/"
+                      >dobroide</a
+                    >
+                    | License:
+                    <a href="https://creativecommons.org/licenses/by/4.0/"
+                      >Attribution 4.0</a
+                    >
+                  </li>
+                  <li>
+                    Image:
+                    <a
+                      href="https://unsplash.com/photos/green-and-brown-trees-during-daytime-z_Uv_-Qbeco"
+                      >Photo</a
+                    >
+                    by
+                    <a href="https://unsplash.com/@irenegambarara"
+                      >Irene Gambarara</a
+                    >
+                    on <a href="https://unsplash.com">Unsplash</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </details>
+      </div>
+    </main>
+    <footer>
+      <p>Made with ☕️ by <a href="https://rivea0.github.io">Eda Eren</a></p>
+    </footer>
+  </body>
+</html>

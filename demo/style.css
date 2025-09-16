@@ -1,0 +1,238 @@
+:root {
+  --box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  --color-1: #6b3a49;
+  --color-2: #494659;
+  --color-3: #eb834c;
+  --heading-color: #3e3e3e;
+  --link-color: #d37a4e;
+  --padding-1: 4rem;
+  --form-element-bg: #fbf8f4;
+  --code-block-bg: #eae4e1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #fff5f5;
+  border: 12px solid;
+  border-image-slice: 1;
+  border-width: 8px;
+  border-image-source: repeating-linear-gradient(var(--color-1) 0%,
+      var(--color-2) 49%,
+      var(--color-3) 100%);
+  font-family: 'Lora', serif;
+}
+
+header {
+  margin-top: 1rem;
+  margin-bottom: 4rem;
+  padding-left: var(--padding-1);
+  color: var(--color-1);
+}
+
+#main-heading {
+  font-weight: 700;
+  font-size: 6ch;
+}
+
+#secondary-heading {
+  font-size: 4ch;
+}
+
+.github-corner:hover .octo-arm {
+  animation: octocat-wave 560ms ease-in-out;
+}
+
+@keyframes octocat-wave {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+
+  20%,
+  60% {
+    transform: rotate(-25deg);
+  }
+
+  40%,
+  80% {
+    transform: rotate(10deg);
+  }
+}
+
+main {
+  padding: 1rem;
+}
+
+#component-items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  place-items: center;
+}
+
+.item {
+  max-width: min-content;
+}
+
+.item>h2 {
+  font-weight: 600;
+  font-size: 2rem;
+  color: var(--heading-color);
+  margin-bottom: 8px;
+}
+
+.code-block>pre {
+  background-color: var(--code-block-bg);
+  margin-top: 0.25rem;
+  max-width: 17rem;
+  padding: 12px;
+}
+
+code[class*="language-"],
+pre[class*="language-"] {
+  font-family: 'DM Mono', monospace;
+  background-color: var(--code-block-bg);
+}
+
+code,
+label {
+  font-family: 'DM Mono', monospace;
+}
+
+#details-items {
+  padding-left: var(--padding-1);
+  margin-top: 3rem;
+}
+
+details {
+  margin-top: 1rem;
+  padding: 1rem;
+  box-shadow: var(--box-shadow);
+}
+
+summary {
+  font-size: 1.5rem;
+  margin-bottom: .5rem;
+}
+
+summary:hover {
+  cursor: pointer;
+}
+
+.customize-form-element {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0.25rem;
+  margin-top: 1rem;
+  box-shadow: var(--box-shadow);
+}
+
+.customize-form-element:focus {
+  box-shadow: var(--box-shadow);
+}
+
+input[type="text"],
+select {
+  background-color: var(--form-element-bg);
+  padding: 4px;
+  border: 2px solid var(--color-1);
+  border-radius: 4px;
+}
+
+input[type="text"]:focus,
+select:focus {
+  outline: none;
+  border-color: var(--color-3);
+  box-shadow: var(--box-shadow);
+}
+
+#reset-customization-btn {
+  padding: .5rem .75rem;
+  border: 0px;
+  box-shadow: var(--box-shadow);
+  background-color: rgba(62, 62, 62, 0.9);
+  border-radius: .25rem;
+  color: white;
+  margin-top: 1rem;
+}
+
+#reset-customization-btn:hover {
+  cursor: pointer;
+  background-image: linear-gradient(var(--color-1) 0%, var(--color-3) 100%)
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+.credits-list {
+  margin-left: 1rem;
+}
+
+.credits-list>li>ul>li {
+  margin-left: 2rem;
+}
+
+footer {
+  text-align: center;
+  color: var(--color-1);
+  padding: 2rem 0 1rem 0;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .github-corner:hover .octo-arm {
+    animation: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .github-corner:hover .octo-arm {
+    animation: none;
+  }
+
+  .github-corner .octo-arm {
+    animation: octocat-wave 560ms ease-in-out;
+  }
+
+  header {
+    padding-left: .75rem;
+  }
+
+  #component-items {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  #details-items {
+    padding-left: 0;
+  }
+}
+
+@media (min-width: 700px) and (max-width: 1024px) {
+  #component-items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #details-items {
+    padding-left: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  #component-items {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  details {
+    width: max-content;
+  }
+}
