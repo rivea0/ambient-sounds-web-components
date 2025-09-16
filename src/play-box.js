@@ -30,7 +30,7 @@ templateEl.innerHTML = `
       height: 5rem;
       border: 0;
       border-radius: 50%;
-      background-color: #000000;
+      background-color: #000;
     }
 
     #play-btn:hover {
@@ -59,20 +59,26 @@ templateEl.innerHTML = `
     line:nth-child(4) { animation-delay: 0.6s; }
     line:nth-child(5) { animation-delay: 0.8s; }
     line:nth-child(6) { animation-delay: 1s; }
-}
 
-@keyframes pulse {
-  0%, 100% {
-    transform: scaleY(1);
+    @media screen and (prefers-reduced-motion: reduce) {
+      line {
+        animation: none;
+      }
+    }
   }
-  50% {
-    transform: scaleY(0.4);
-  }
-}
 
-:host([hidden]) {
-  display: none;
-}
+  @keyframes pulse {
+    0%, 100% {
+      transform: scaleY(1);
+    }
+    50% {
+      transform: scaleY(0.4);
+    }
+  }
+
+  :host([hidden]) {
+    display: none;
+  }
 </style>
 <div id="box-div">
   <div id="btn-div">
@@ -119,8 +125,6 @@ export class PlayBox extends HTMLElement {
 
   static get observedAttributes() {
     return [
-      'imageSrc',
-      'audioSrc',
       'overlayColor',
       'iconColor',
       'buttonPosition',
@@ -134,7 +138,7 @@ export class PlayBox extends HTMLElement {
     this.attachShadow({ mode: 'open' });
     this.shadowRoot.appendChild(templateEl.content.cloneNode(true));
 
-    // Used for overlayColor, boxBorderRadius and imageSrc
+    // Used for overlayColor and boxBorderRadius
     this._boxDiv = this.shadowRoot.querySelector('#box-div');
 
     // Used for buttonPosition
@@ -147,7 +151,7 @@ export class PlayBox extends HTMLElement {
     this._playSVG = this.shadowRoot.querySelector('#play-svg');
     this._pauseSVG = this.shadowRoot.querySelector('#pause-svg');
 
-    // Used for audioSrc and checking for the playing/paused state
+    // Used for checking for the playing/paused state
     this._audioEl = this.shadowRoot.querySelector('#audio-el');
   }
 
@@ -238,20 +242,12 @@ export class PlayBox extends HTMLElement {
   }
 
   _updateAttributes() {
-    if (this._audioEl) {
-      // TODO: Valid src checks
-      this._audioEl.src = this.getAttribute('audioSrc');
-    }
-
     if (this._boxDiv && this._playBtn) {
       this.overlayColor = this.getAttribute('overlayColor');
     }
 
     if (this._boxDiv) {
       this.boxBorderRadius = this.getAttribute('boxBorderRadius') || 'full';
-      const bgImageSrc = this.getAttribute('imageSrc');
-      // TODO: Valid src checks
-      this._boxDiv.style.backgroundImage = `url("${bgImageSrc}")`;
     }
 
     if (this._playBtn) {
@@ -280,14 +276,6 @@ export class PlayBox extends HTMLElement {
 
   attributeChangedCallback(name, _, newValue) {
     switch (name) {
-      case 'audioSrc':
-        // TODO: Valid src checks
-        this._audioEl.src = newValue;
-        break;
-      case 'imageSrc':
-        // TODO: Valid src checks
-        this._boxDiv.style.backgroundImage = `url("${newValue}")`;
-        break;
       case 'overlayColor':
         this.overlayColor = newValue;
         break;
