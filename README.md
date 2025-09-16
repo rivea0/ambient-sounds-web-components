@@ -6,7 +6,7 @@
 
 <br />
 
-See full [demo]().
+See full [demo](https://rivea0.github.io/ambient-sounds-web-components/index.html).
 
 ## Components
 
@@ -110,7 +110,7 @@ See full [demo]().
 
 ## Usage
 
-The components import and extend the `PlayBox` class, so make sure you have [`play-box.js`]().
+The components import and extend the `PlayBox` class, so make sure you have [`play-box.js`](https://github.com/rivea0/ambient-sounds-web-components/blob/main/src/play-box.js).
 
 Add the component you'd like to use, for example:
 
@@ -118,7 +118,7 @@ Add the component you'd like to use, for example:
 <script type="module" src="heavy-rain.js" defer></script>
 ```
 
-Make sure you have the assets (audio and image sources) for the components. (for example, [assets/heavy-rain]()).
+Make sure you have the assets (audio and image sources) for the components. (for example, [assets/heavy-rain](https://github.com/rivea0/ambient-sounds-web-components/tree/main/src/assets/heavy-rain)).
 
 Then use it in your HTML:
 
